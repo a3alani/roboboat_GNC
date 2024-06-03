@@ -260,7 +260,7 @@ def main(args=None):
         cam = CameraDetection(qRgb, qDet, frame, detections, startTime, counter, color2, labels)
         while True: 
             cam.navigation(qRgb, qDet, frame, detections, startTime, counter, color2, labels)
-            rclpy.spin(cam)
+        rclpy.spin(cam)
         rclpy.shutdown()
     
 if __name__ == '__main__':
