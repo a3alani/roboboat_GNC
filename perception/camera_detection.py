@@ -6,7 +6,6 @@ We add parsing from JSON files that contain configuration
 
 import rclpy
 from rclpy.node import Node
-
 from pathlib import Path
 import sys
 import cv2
