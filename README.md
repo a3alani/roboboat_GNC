@@ -36,3 +36,8 @@
 3. run: docker run -it --privileged --network=host camera_node_working_code
 4. cd roboboat_code
 5. run: python3 buoy_navigation.py
+
+## Moving the boat
+1. Move the boat in front of the buoy path using Remote Controller
+2. Press the top left button on the Remote Controller to make it autonomous mode
+3. Boat should move autonomously through the buoys, completing the **follow the path** task
