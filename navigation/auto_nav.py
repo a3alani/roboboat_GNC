@@ -2,7 +2,6 @@
 Importing ROS, time, numpy, math
 Importing IMU"""
 
-
 #!/usr/bin/env python
 import rclpy
 from rclpy.node import Node
