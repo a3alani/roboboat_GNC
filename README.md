@@ -2,6 +2,13 @@
 
 ## Project Objective 
 
+Our project involves collaborating with TritonAI to develop software that enables a
+programmable boat, or "roboboat," to navigate through a course marked by buoys. The aim is to
+create the system that will guide the boat autonomously by identifying and following a path
+created by these buoys without human intervention. This involves integrating sensing
+technologies to perceive the environment accurately and implementing deep learning algorithms
+to translate the perceived environment into path following navigation commands.
+
 ## Yolov8 Model Training
 [Yolov8 Model Training](https://colab.research.google.com/drive/162ieDzJ4uWKk8rTw9WhVz0mwlGlbb6D-?usp=sharing)  
 [Dataset](https://universe.roboflow.com/cse237d/buoy-detection-dzz7y)
@@ -37,8 +44,9 @@ source /opt/ros/humble/install/setup.bash
 3. pw: `jetsonucsd`
 
 
-## Running the Serial server
-
+## Running the Serial Server
+### Serial Server is the code that takes in direction for the oat to move and convert it to thrusters movements
+### Code can be found in [/navigation/serial_server.py](https://github.com/a3alani/roboboat_GNC/tree/main/navigation)
 1. SSH to the jetson
 2. inside the Jetson run
 3. run:
@@ -50,7 +58,9 @@ docker run -it --privileged --network=host this_actually_works:latest
 6. `cd ros2_serial_interface`
 7. run: `python3 serial_server.py`
 
-## Running the navigation Node
+## Running the Navigation Node
+### Navigation Node is a ROS (Robot Operating System) Node that subscribes to the Camera Node. It subscribes directions for the boat to move and pass the data to the serial server.
+### Code can be found in [/navigation/auto_nav.py](https://github.com/a3alani/roboboat_GNC/tree/main/navigation)
 1. open a new terminal
 2. SSH into the Jetson
 3. run `docker ps` and copy the container id of the `this_actually_works` docker container
@@ -65,7 +75,9 @@ docker exec -it <container-id> /bin/bash
 11. paste the code into auto_nav.py
 12. run: `python3 auto_nav.py`
     
-## Running the camera Node
+## Running the Camera Node
+### Camera Node is a ROS (Robot Operating System) Node that takes in the OAK-D camera input stream, run the model on the input and publish directions for the boat to move. It passes the data to the Navigation Node. 
+### Code can be found in [/perception/buoy_navigation.py](https://github.com/a3alani/roboboat_GNC/tree/main/perception)
 1. open a new terminal
 2. ssh into the Jetson
 3. run:
