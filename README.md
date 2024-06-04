@@ -39,3 +39,16 @@
 1. Move the boat in front of the buoy path using Remote Controller
 2. Press the top left button on the Remote Controller to make it autonomous mode
 3. Boat should move autonomously through the buoys, completing the **follow the path** task
+
+
+## Documentation
+- [Project Specification](https://drive.google.com/file/d/1p6h2CfVdSFPlanNX6-uoW_igBA2jE8-6/view?usp=sharing)
+- [Milestone Report](https://drive.google.com/file/d/1p6h2CfVdSFPlanNX6-uoW_igBA2jE8-6/view?usp=sharing)
+- [Final Oral Presentation](https://docs.google.com/presentation/d/15L_Spe2V0VIPEk-d25XDykG1sU-B2HTUzz7Nw4XxNmM/edit?usp=sharing)
+- [Technical Report]()
+
+## Contributors
+- [Akshara Kuduvalli](https://github.com/akkuduvalli)
+- [Ali Alani](https://github.com/a3alani)
+- [Dina Dehaini](https://github.com/dinadehaini)
+- [Kenzo Ku](https://github.com/kenzoputraku)
