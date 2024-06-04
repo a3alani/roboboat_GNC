@@ -45,7 +45,7 @@ source /opt/ros/humble/install/setup.bash
 ```bash
 docker run -it --privileged --network=host this_actually_works:latest
 ```
-4. cd `~/ros2_serial_interface`
+4. `cd ~/ros2_serial_interface`
 5. `. install/setup.bash`
 6. `cd ros2_serial_interface`
 7. run: `python3 serial_server.py`
