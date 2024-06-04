@@ -1,4 +1,5 @@
 # roboboat_GNC 
+![roboboat](./media/barcopolo2.png)
 
 ## Project Objective and Background
 
@@ -8,6 +9,8 @@ create the system that will guide the boat autonomously by identifying and follo
 created by these buoys without human intervention. This involves integrating sensing
 technologies to perceive the environment accurately and implementing deep learning algorithms
 to translate the perceived environment into path following navigation commands.
+
+![follow the path](./media/task3.png)
 
 ## Contents
 - [Setup](#setup)
