@@ -41,7 +41,7 @@ source /opt/ros/humble/install/setup.bash
 
 1. SSH to the jetson
 2. inside the Jetson run
-3.
+3. run:
 ```bash
 docker run -it --privileged --network=host this_actually_works:latest
 ```
