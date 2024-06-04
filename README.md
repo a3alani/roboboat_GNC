@@ -9,6 +9,10 @@ created by these buoys without human intervention. This involves integrating sen
 technologies to perceive the environment accurately and implementing deep learning algorithms
 to translate the perceived environment into path following navigation commands.
 
+## Contents
+- [Setup](#setup)
+- [Documentation](#documentation)
+- [Contributors](#contributors)
 ## Yolov8 Model Training
 [Yolov8 Model Training](https://colab.research.google.com/drive/162ieDzJ4uWKk8rTw9WhVz0mwlGlbb6D-?usp=sharing)  
 [Dataset](https://universe.roboflow.com/cse237d/buoy-detection-dzz7y)
