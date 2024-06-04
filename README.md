@@ -26,6 +26,8 @@ We have trained a Yolov8 model on Roboboat competition images of labeled buoys. 
 ## Organization
 The `navigation` and `perception` folders contain the ROS2 node implementations of detecting bounding boxes from the real-time camera stream and the steering commands to the thusters using our path prediction algorithm. `Yolov8_model` contains the `.blob` file needed to run inference using DepthAI, Luxonis's software library. 
 
+![Flowchart (1)](https://github.com/a3alani/roboboat_GNC/assets/103146838/17b573ac-2dca-47e1-941b-5215571f84e9)
+
 ## Yolov8 Model Training
 [Yolov8 Model Training](https://colab.research.google.com/drive/162ieDzJ4uWKk8rTw9WhVz0mwlGlbb6D-?usp=sharing)  
 [Dataset](https://universe.roboflow.com/cse237d/buoy-detection-dzz7y)
