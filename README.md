@@ -31,12 +31,12 @@ The `navigation` and `perception` folders contain the ROS2 node implementations 
 To deploy a custom YOLO model to the Luxonis OAK camera, it must be in the OpenVino .blob format. This process is streamlined at [tools.luxonis.com](https://tools.luxonis.com/), for automatic YOLO export for Luxonis devices. 
 
 ## Setup 
-Developed and tested on `python=3.8.10`
-Implementation in ROS2 Humble
-Useful Resources for Installation Setup:
-[Docker](https://www.docker.com/products/docker-desktop/)
-[Python](https://www.python.org/)
-[ROS2 Humble](https://docs.ros.org/en/humble/index.html)
+Developed and tested on `python=3.8.10`  
+Implementation in ROS2 Humble  
+Useful Resources for Installation Setup:  
+[Docker](https://www.docker.com/products/docker-desktop/)  
+[Python](https://www.python.org/)  
+[ROS2 Humble](https://docs.ros.org/en/humble/index.html)  
 
 
 ## Docker Container(s) setup 
