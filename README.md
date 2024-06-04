@@ -1,6 +1,6 @@
 # roboboat_GNC 
 
-## Project Objective 
+## Project Objective and Background
 
 Our project involves collaborating with TritonAI to develop software that enables a
 programmable boat, or "roboboat," to navigate through a course marked by buoys. The aim is to
@@ -13,6 +13,16 @@ to translate the perceived environment into path following navigation commands.
 - [Setup](#setup)
 - [Documentation](#documentation)
 - [Contributors](#contributors)
+## Methods 
+
+We have trained a Yolov8 model on Roboboat competition images of labeled buoys. We run this model on edge on the Luxonis OAK - D Pro Camera, and generate real-time navigation commands using the following path prediction algorithm:
+* polygon from the sorted buoy positions + memory of location
+* Midpoint calculations of path in comparison to horizontal center of frame
+* Steering commands based on threshold sensitivities for left/right
+
+## Organization
+The `navigation` and `perception` folders contain the ROS2 node implementations of detecting bounding boxes from the real-time camera stream and the steering commands to the thusters using our path prediction algorithm. `Yolov8_model` contains the `.blob` file needed to run inference using DepthAI, Luxonis's software library. 
+
 ## Yolov8 Model Training
 [Yolov8 Model Training](https://colab.research.google.com/drive/162ieDzJ4uWKk8rTw9WhVz0mwlGlbb6D-?usp=sharing)  
 [Dataset](https://universe.roboflow.com/cse237d/buoy-detection-dzz7y)
