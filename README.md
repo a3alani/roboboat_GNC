@@ -23,13 +23,47 @@ The `navigation` and `perception` folders contain the ROS2 node implementations 
 [Yolov8 Model Training](https://colab.research.google.com/drive/162ieDzJ4uWKk8rTw9WhVz0mwlGlbb6D-?usp=sharing)  
 [Dataset](https://universe.roboflow.com/cse237d/buoy-detection-dzz7y)
 
+## Custom Model Deployment to Luxonis OAK 
+To deploy a custom YOLO model to the Luxonis OAK camera, it must be in the OpenVino .blob format. This process is streamlined at [tools.luxonis.com](https://tools.luxonis.com/), for automatic YOLO export for Luxonis devices. 
+
 ## Setup 
 Developed and tested on `python=3.8.10`
+Implementation in ROS2 Humble
+Useful Resources for Installation Setup:
+[Docker](https://www.docker.com/products/docker-desktop/)
+[Python](https://www.python.org/)
+[ROS2 Humble](https://docs.ros.org/en/humble/index.html)
 
-## Running docker containers
+
+## Docker Container(s) setup 
+## Setup for Navigation and Serial Server Docker containers 
+Build Docker image for Ros2 Humble and clone the `depthai-python` repository and install requirements. 
+```
+docker pull osrf/ros:humble-desktop
+docker run -it --privileged --network=host osrf/ros:humble-desktop
+cd
+git clone https://github.com/luxonis/depthai-python.git
+cd depthai-python/examples
+python3 install_requirements.py
+cd ../..
+git clone <this repository>
+python3 navigation/auto_nav.py
+python3 navigation/serial_server.py
+```
+
+## Setup for Camera / Perception and Path Prediction Docker Container  
+Download and run prebuilt Docker Images for Luxonis ROS Driver, then clone this repository to run perception ROS node. 
+```
+docker run -it -v /dev/:/dev/  --privileged -e DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix luxonis/depthai-ros:humble-latest bash
+git clone <this repository>
+python3 perception/buoy/navigation.py
+```
+
+# Instructions to run on Team Inspiration Barco Polo Roboboat (existing)
+## Running Docker containers
 
 ```bash
-docker run --runtime nvidia -it --rm --network=host roboboat_humble:l4t-r35.4.1
+docker run --runtime nvidia -it --rm --network=host <container name: tag>
 ```
 
 View installed packages:
@@ -45,7 +79,6 @@ Source `ros2` everytime before you're using it.
 ```bash
 source /opt/ros/humble/install/setup.bash
 ```
-
 
 ## How to ssh to the jetson
 
