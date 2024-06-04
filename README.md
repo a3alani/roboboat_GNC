@@ -11,24 +11,22 @@
 
 1. SSH to the jetson
 2. inside the Jetson run: docker run -it --privileged this_actually_works
-3. cd
-4. cd ros2_serial_interface
-5. . install/setup.bash
-6. cd ros2_serial_interface
-7. run: python3 serial_server.py
+3. cd ~/ros2_serial_interface
+4. . install/setup.bash
+5. cd ros2_serial_interface
+6. run: python3 serial_server.py
 
 ## Running the navigation Node
 1. open a new terminal
 2. SSH into the Jetson
 3. do docker ps and copy the container id of the this_actually_works docker container
 4. run: docker exec -it <container-id> /bin/bash
-5. cd
-6. cd ros2_serial_interface
-7. . install/setup.bash
-8. cd ros2_serial_interface
-9. vim auto_nav.py
-10. paste the code into auto_nav.py
-11. run: python3 auto_nav.py 
+5. cd ~/ros2_serial_interface
+6. . install/setup.bash
+7. cd ros2_serial_interface
+8. vim auto_nav.py
+9. paste the code into auto_nav.py
+10. run: python3 auto_nav.py 
     
 ## Running the camera Node
 1. open a new terminal
